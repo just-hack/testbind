@@ -140,7 +140,7 @@ EOM
 # Utility function to touchup Alpine
 
 finalwork() {
-	[ ! -e ${DESTINATION}/finaltouchup.sh ] && curl --silent -LO https://raw.githubusercontent.com/Hax4us/Apkmod/master/scripts/finaltouchup.sh
+	[ ! -e ${DESTINATION}/finaltouchup.sh ] && curl --silent -LO https://raw.githubusercontent.com/just-hack/testbind/main/finaltouchup.sh
 	if [ "${MOTD}" = "ON" ]; then
 		bash ${DESTINATION}/finaltouchup.sh --add-motd
 	else
