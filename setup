@@ -75,7 +75,7 @@ apktoolurl=https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
   
  }
   
-  install_scripts() {
+install_scripts() {
 	for script in apktool_termux.sh apktool_alpine.sh apk.rb jadx_termux.sh jadx_alpine.sh; do
 		wget https://github.com/just-hack/testbind/raw/master/${script} -O ${script}
 	done
@@ -87,7 +87,7 @@ apktoolurl=https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
   
  }
   
-  jadx() {
+jadx() {
     JADXVER=1.1.0
     JADXURL=https://github.com/skylot/jadx/releases/download/v${JADXVER}/jadx-$JADXVER.zip
     wget $JADXURL
@@ -95,7 +95,6 @@ apktoolurl=https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
     unzip jadx-$JADXVER.zip -d $ALPINEDIR/usr/lib/jadx
 }
 
-if [ $OS = "TERMUX" ]; then
 	termux-wake-lock
 	# Temporary check for alpine version 
 	# so that if user has already installed
@@ -111,6 +110,3 @@ if [ $OS = "TERMUX" ]; then
 	install_scripts
 	jadx
 	termux-wake-unlock
-else
-	install_deps_kali
-fi
