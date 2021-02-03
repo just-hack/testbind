@@ -27,7 +27,7 @@ detect_os() {
 
 setup_alpine() {
 	if [ ! "$1" = "--without-alpine" ]; then
-		wget https://raw.githubusercontent.com/just-hack/testbind/master/TermuxAlpine.sh -O TermuxAlpine.sh
+		wget https://raw.githubusercontent.com/just-hack/testbind/main/TermuxAlpine.sh -O TermuxAlpine.sh
 		bash TermuxAlpine.sh
 	fi
 	mkdir -p ${ALPINEDIR}/root/.bind
@@ -77,7 +77,7 @@ apktoolurl=https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
   
 install_scripts() {
 	for script in apktool_termux.sh apktool_alpine.sh apk.rb jadx_termux.sh jadx_alpine.sh; do
-		wget https://github.com/just-hack/testbind/raw/master/${script} -O ${script}
+		wget https://github.com/just-hack/testbind/raw/main/${script} -O ${script}
 	done
   
   mv apktool_termux.sh ${BINDIR}/apktool && chmod +x ${BINDIR}/apktool
