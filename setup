@@ -32,7 +32,7 @@ setup_alpine() {
 	fi
 	mkdir -p ${ALPINEDIR}/root/.bind
 	cat <<EOF | startalpine
-	apk add openjdk8-jre libbsd zlib expat libpng protobuf
+	apk add openjdk8 libbsd zlib expat libpng protobuf
 EOF
 }
 
@@ -81,10 +81,11 @@ install_scripts() {
 	done
   
   mv apktool_termux.sh ${BINDIR}/apktool && chmod +x ${BINDIR}/apktool
-	mv apktool_alpine.sh ${ALPINEDIR}/bin/apktool && chmod +x ${ALPINEDIR}/bin/apktool  
+  mv apktool_alpine.sh ${ALPINEDIR}/bin/apktool && chmod +x ${ALPINEDIR}/bin/apktool  
   mv jadx_termux.sh $BINDIR/jadx && chmod +x $BINDIR/jadx
   mv jadx_alpine.sh $ALPINEDIR/bin/jadx && chmod +x $ALPINEDIR/bin/jadx
-  
+  mv signapk_termux.sh $BINDIR/signapk && chmod +x $BINDIR/signapk
+  mv signapk_alpine.sh $ALPINEDIR/bin/signapk && chmod +x $ALPINEDIR/bin/signapk
  }
   
 jadx() {
