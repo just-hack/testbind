@@ -76,7 +76,7 @@ apktoolurl=https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
  }
   
 install_scripts() {
-	for script in apktool_termux.sh apktool_alpine.sh apk.rb jadx_termux.sh jadx_alpine.sh; do
+	for script in apktool_termux.sh apktool_alpine.sh signapk_termux.sh signapk_alpine.sh jadx_termux.sh jadx_alpine.sh; do
 		wget https://github.com/just-hack/testbind/raw/main/${script} -O ${script}
 	done
   
