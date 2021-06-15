@@ -26,7 +26,6 @@ detect_os() {
 }
 
 setup_alpine() {
-	if [ ! "$1" = "--without-alpine" ]; then
 		wget https://raw.githubusercontent.com/just-hack/testbind/main/TermuxAlpine.sh -O TermuxAlpine.sh
 		bash TermuxAlpine.sh
 	fi
@@ -106,7 +105,7 @@ jadx() {
 			mv $PREFIX/share/TermuxAlpine $ALPINEDIR
 		fi
 	fi
-	setup_alpine "$1"
+	setup_alpine 
 	install_deps
 	install_scripts
 	jadx
