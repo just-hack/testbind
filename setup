@@ -28,7 +28,6 @@ detect_os() {
 setup_alpine() {
 		wget https://raw.githubusercontent.com/just-hack/testbind/main/TermuxAlpine.sh -O TermuxAlpine.sh
 		bash TermuxAlpine.sh
-	fi
 	mkdir -p ${ALPINEDIR}/root/.bind
 	cat <<EOF | startalpine
 	apk add openjdk8 libbsd zlib expat libpng protobuf
@@ -85,7 +84,7 @@ install_scripts() {
   mv jadx_alpine.sh $ALPINEDIR/bin/jadx && chmod +x $ALPINEDIR/bin/jadx
   mv signapk_termux.sh $BINDIR/signapk && chmod +x $BINDIR/signapk
   mv signapk_alpine.sh $ALPINEDIR/bin/signapk && chmod +x $ALPINEDIR/bin/signapk
-  mv java_termux $BINDIR/java && chmod +x $BINDIR/java
+  mv Java_termux $BINDIR/java && chmod +x $BINDIR/java
  }
   
 jadx() {
